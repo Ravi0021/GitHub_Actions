@@ -5,7 +5,7 @@ s3 = boto3.client('s3')
 latest_versions = {}
 
 # Extract all latest version of each file
-def extractLatestVersions(response,modified_date):
+def extract_latest_versions(response,modified_date):
     for version in response['Versions']:
         last_modified = version['LastModified']
         if last_modified < modified_date:
@@ -14,7 +14,7 @@ def extractLatestVersions(response,modified_date):
                 latest_versions[key] = version
 
 # Copy all latest version of each file to another location
-def copyLatestFiles(bucket_name, output_prefix):
+def copy_latest_files(bucket_name, output_prefix):
     for version in latest_versions.values():
         file_path = version['Key']
         path_parts = file_path.split('/')
