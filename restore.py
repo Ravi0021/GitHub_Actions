@@ -43,4 +43,4 @@ if __name__ == "__main__":
     OUTPUT_PATH_PREFIX = sys.argv[3]
     date = sys.argv[4]
     modifiedDate=datetime.fromisoformat(date).replace(tzinfo=timezone.utc)
-    main(BUCKET,inputPathPrefix,outputPathPrefix,modifiedDate)
+    main(BUCKET,INTPUT_PATH_PREFIX,OUTPUT_PATH_PREFIX,modifiedDate)
