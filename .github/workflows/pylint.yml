@@ -21,15 +21,15 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint --fail-under=8 $(git ls-files '*.py')
-              - name: Clone other repositories
-        run: |
-          https://github.com/Ravi0021/automation.git
-          https://github.com/Ravi0021/automate.git
-          # Add more 'git clone' commands for additional repositories
+    - name: Clone other repositories
+      run: |
+        https://github.com/Ravi0021/automation.git
+        https://github.com/Ravi0021/automate.git
+        # Add more 'git clone' commands for additional repositories
 
     - name: Analyze code for duplication
       run: |
-          python code_analysis_script.py --folder path/to/generic/folder
+        python code_analysis_script.py --folder path/to/generic/folder
           # Replace code_analysis_script.py with your script and provide the appropriate folder path
 
     - name: Report results
