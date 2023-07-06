@@ -29,7 +29,7 @@ jobs:
 
     - name: Analyze code for duplication
       run: |
-        python code_analysis_script.py --folder automation
+        python code_analysis_script.py --folder GitHub_Actions
           # Replace code_analysis_script.py with your script and provide the appropriate folder path
 
     - name: Report results
