@@ -23,8 +23,8 @@ jobs:
         pylint --fail-under=8 $(git ls-files '*.py')
     - name: Clone other repositories
       run: |
-        https://github.com/Ravi0021/automation.git
-        https://github.com/Ravi0021/automate.git
+        git clone https://github.com/Ravi0021/automation.git
+        git clone https://github.com/Ravi0021/automate.git
         # Add more 'git clone' commands for additional repositories
 
     - name: Analyze code for duplication
