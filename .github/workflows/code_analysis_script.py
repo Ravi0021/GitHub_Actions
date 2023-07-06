@@ -2,7 +2,7 @@ import difflib
 import os
 
 # Path to the reference code file in your repository
-reference_code_path = 'restore_previous_versions_files.py'
+REFERENCE_CODE_PATH = 'restore_previous_versions_files.py'
 
 # Paths to the cloned repositories
 cloned_repo_paths = [
@@ -16,7 +16,7 @@ duplication_results = []
 
 def analyze_code():
     # Read the reference code file
-    with open(reference_code_path, 'r') as reference_file:
+    with open(REFERENCE_CODE_PATH, 'r') as reference_file:
         reference_code = reference_file.readlines()
 
     # Iterate over the cloned repositories
