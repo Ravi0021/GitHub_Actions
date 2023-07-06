@@ -23,7 +23,7 @@ jobs:
         git clone https://github.com/Ravi0021/automate.git
         # Add more 'git clone' commands for additional repositories
     - name: Copy generic file to current repository
-      run: cp automate/src/com/utils/restore_previous_versions_files.py impetus/file.py
+      run: cp automate/src/com/utils/restore_previous_versions_files.py impetus/utils/file.py
     - name: List all Python files
       run: git ls-files '*.py' > file_list.txt
 
